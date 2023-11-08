@@ -31,15 +31,16 @@ class Muscule():
     self.Angles = Angle(a, b)
 
   #возвращем активности нейронов -2 слоя
+    ## Функция описывает сокращение мышцы согласно Модели Хила
   def reduction(self, a_p, a_m):
     l = lambda x: np.sqrt(self.c1 - x**2)
     f_cur = self.flexor[-1]
     e_cur = self.extenzor[-1]
     self.Angles.flexion(f_cur, e_cur)
-    if ((f_cur + a_p) <= self.l_max) & (e_cur + a_m <= self.l_max):
-      f_cur += a_p
+    if (l(f_cur - a_p) <= self.l_max) & (l(e_cur - a_m) <= self.l_max):
+      f_cur -= a_p
       e_cur = l(f_cur)
-      e_cur += a_m
+      e_cur -= a_m
       f_cur = l(e_cur)
       ret = np.array([0, 0])
     else:
