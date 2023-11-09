@@ -3,8 +3,6 @@ import numpy as np
 # activation functions
 sigmoid = lambda t: 1 / (1 + np.exp(-t))
 f = lambda t: (t >= 1).astype(float)
-
-
 class NeuralNetwork:
 
   def __init__(self, layer0, layer1, layer2):
@@ -33,4 +31,5 @@ class NeuralNetwork:
 
   def backprop(self):
     self.layer_1 = f(np.dot(self.W_2, self.layer_2))
-    self.layer0 = f(np.dot(self.W_1, self.layer_1) + self.layer0)
+    b0 = self.layer0
+    self.layer0 = f(np.dot(self.W_1, self.layer_1) + b0)

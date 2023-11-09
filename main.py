@@ -6,17 +6,18 @@ from Models.Runner import Runner
 # activation functions
 sigmoid = lambda t: 1/(1+np.exp(-t))
 f = lambda t: (t >= 1).astype(float)
-act1 = lambda x: (x//6)%2 #сюда надо веса и как либо обучать
+act1 = lambda x: (x//5)%2 #сюда надо веса и как либо обучать
 
 def main():
     N = 30
     time = list(range(N))
 
-    segment = Limb(3, 4, [1, 0], [0, 0, 0, 0], [])
+    segment = Limb(10, 3, 4, [1, 0], [0, 0, 0, 0], [])
     simulation = Runner(N, segment)
     simulation.run_simulate(act1)
-    simulation.display_layer("layer1")
+    simulation.display_layer("layer2")
     simulation.display_limb()
+    plt.show()
     #time
     time = list(range(N))
 
