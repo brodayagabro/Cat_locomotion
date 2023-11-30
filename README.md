@@ -8,5 +8,5 @@ main.py -  файл с функцией запуска симуляции
 
 ## Как поднять репозиторий у себя на ПК
 ```bash
-git clone -b Rybac_dev https://github.com/brodayagabro/Cat_locomotion
+git clone -b Rybak_dev https://github.com/brodayagabro/Cat_locomotion
 ```
