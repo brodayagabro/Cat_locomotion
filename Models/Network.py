@@ -3,9 +3,9 @@ import numpy as np
 # activation functions
 sigmoid = lambda t: 1 / (1 + np.exp(-t))
 f = lambda t: (t >= 1).astype(float)
-class NeuralNetwork:
-
-  def __init__(self, layer0, layer1, layer2):
+class NM:# Neuro-module class
+  _neurons = n
+  def __init__(self):
     self.layer0 = layer0
     self.layer1 = layer1
     self.layer2 = layer2
