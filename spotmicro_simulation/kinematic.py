@@ -19,7 +19,7 @@ def main():
     p.loadURDF("plane.urdf")  # ground plane
     
     # Load SpotMicroAI robot URDF
-    robot_id = p.loadURDF("spotmicroai.urdf", basePosition=[0, 0, 0.2])
+    robot_id = p.loadURDF("spotmicroai_fixed.urdf", basePosition=[0, 0, 0.2])
     
     # Get all movable joint indices (exclude fixed joints)
     joint_indices = []

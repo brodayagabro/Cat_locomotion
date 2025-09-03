@@ -44,7 +44,7 @@ def apply_gait(robot_id, leg_joints, t, phase_offset=0.0):
 if __name__ == "__main__":
     setup_simulation()
 
-    urdf_path = "/home/neuron/projects/spotmicro_simulation/spotmicroai.urdf"
+    urdf_path = "../spotmicroai_fixed.urdf"
 
     # Load two robots
     robot1_id = load_spotmicro(urdf_path, [0, -0.3, 0.3])

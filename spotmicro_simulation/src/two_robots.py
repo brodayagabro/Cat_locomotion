@@ -15,7 +15,7 @@ p.setAdditionalSearchPath(pybullet_data.getDataPath())
 p.loadURDF("plane.urdf")
 
 # Path to your URDF
-urdf_path = "/home/neuron/projects/spotmicro_simulation/spotmicroai.urdf"
+urdf_path = "../spotmicroai_fixed.urdf"
 
 # Load Robot 1
 start_pos1 = [0, 0, 0.3]  # Robot 1 position
